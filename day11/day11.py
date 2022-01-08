@@ -7,24 +7,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from utils import io
-
-#   \ n  /
-# nw +--+ ne
-#   /    \
-# -+      +-
-#   \    /
-# sw +--+ se
-#   / s  \
-
-# https://www.redblobgames.com/grids/hexagons/#coordinates-cube
-OFFSETS = {
-    "n": (1, -1, 0),
-    "s": (-1, 1, 0),
-    "nw": (0, -1, 1),
-    "ne": (1, 0, -1),
-    "se": (0, 1, -1),
-    "sw": (-1, 0, 1),
-}
+from utils.hex import *
 
 
 def walk(input):
@@ -32,30 +15,20 @@ def walk(input):
     steps = [pos]
     for step in input.split(","):
         pos = (
-            pos[0] + OFFSETS[step][0],
-            pos[1] + OFFSETS[step][1],
-            pos[2] + OFFSETS[step][2],
+            pos[0] + HEX_OFFSETS[step][0],
+            pos[1] + HEX_OFFSETS[step][1],
+            pos[2] + HEX_OFFSETS[step][2],
         )
         steps.append(pos)
 
     return pos, steps
 
 
-def cube_subtract(a, b):
-    return (a[0] - b[0], a[1] - b[1], a[2] - b[2])
-
-
-# https://www.redblobgames.com/grids/hexagons/#distances
-def cube_dist(a, b):
-    diff = cube_subtract(a, b)
-    return (abs(diff[0]) + abs(diff[1]) + abs(diff[2])) // 2
-
-
 def solve(input):
     start = (0, 0, 0)
     pos, path = walk(input)
 
-    return cube_dist(start, pos), max([cube_dist(start, p) for p in path])
+    return hex_cube_dist(start, pos), max([hex_cube_dist(start, p) for p in path])
 
 
 def main():
