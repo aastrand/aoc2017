@@ -9,3 +9,29 @@ BOTTOM_LEFT = (-1, 1)
 
 
 OFFSETS = (RIGHT, LEFT, BOTTOM, TOP, TOP_LEFT, BOTTOM_RIGHT, TOP_RIGHT, BOTTOM_LEFT)
+OFFSETS_STRAIGHT = (RIGHT, LEFT, TOP, BOTTOM)
+
+
+def print_grid(grid, default="."):
+    for y in range(128):
+        r = []
+        for x in range(128):
+            r.append(str(grid.get((x, y), default)))
+        print("".join(r))
+    print()
+
+
+def flood_fill(grid, pos, visitor):
+    q = [pos]
+    visited = set()
+    visited.add(pos)
+
+    while len(q) > 0:
+        pos = q.pop(0)
+        visitor(grid, pos)
+
+        for o in OFFSETS_STRAIGHT:
+            neighbour = (pos[0] + o[0], pos[1] + o[1])
+            if grid.get(neighbour) == "#" and neighbour not in visited:
+                q.append(neighbour)
+                visited.add(neighbour)
