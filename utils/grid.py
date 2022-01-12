@@ -12,10 +12,10 @@ OFFSETS = (RIGHT, LEFT, BOTTOM, TOP, TOP_LEFT, BOTTOM_RIGHT, TOP_RIGHT, BOTTOM_L
 OFFSETS_STRAIGHT = (RIGHT, LEFT, TOP, BOTTOM)
 
 
-def print_grid(grid, default="."):
-    for y in range(128):
+def print_grid(grid, maxX=128, maxY=128, default="."):
+    for y in range(maxY):
         r = []
-        for x in range(128):
+        for x in range(maxX):
             r.append(str(grid.get((x, y), default)))
         print("".join(r))
     print()
