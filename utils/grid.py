@@ -1,3 +1,5 @@
+from collections import namedtuple
+
 RIGHT = (1, 0)
 LEFT = (-1, 0)
 BOTTOM = (0, 1)
@@ -12,7 +14,14 @@ OFFSETS = (RIGHT, LEFT, BOTTOM, TOP, TOP_LEFT, BOTTOM_RIGHT, TOP_RIGHT, BOTTOM_L
 OFFSETS_STRAIGHT = (RIGHT, LEFT, TOP, BOTTOM)
 
 
-def print_grid(grid, maxX=128, maxY=128, default="."):
+Grid = namedtuple("Grid", "data minX maxX minY maxY")
+
+
+def print_grid(grid):
+    _print_grid(grid.data, grid.maxX, grid.maxY)
+
+
+def _print_grid(grid, maxX=128, maxY=128, default="."):
     for y in range(maxY):
         r = []
         for x in range(maxX):
