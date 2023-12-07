@@ -54,8 +54,8 @@ def solve(filename, iterations):
 
 def main():
     assert solve("example.txt", 2) == 12
-    print(solve("input.txt", 5))
-    print(solve("input.txt", 18))
+    print(solve("../input/2017/day21.txt", 5))
+    print(solve("../input/2017/day21.txt", 18))
 
 
 if __name__ == "__main__":

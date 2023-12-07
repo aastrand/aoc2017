@@ -37,7 +37,7 @@ def main():
     assert solve("ne,ne,s,s")[0] == 2
     assert solve("se,sw,se,sw,sw")[0] == 3
 
-    r = solve(io.get_input("input.txt"))
+    r = solve(io.get_input("../input/2017/day11.txt"))
     print(r[0])
     print(r[1])
 

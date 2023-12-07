@@ -100,7 +100,7 @@ def part1(filename):
 
 def main():
     assert part1("example.txt") == 3
-    print(part1("input.txt"))
+    print(part1("../input/2017/day25.txt"))
 
 
 if __name__ == "__main__":

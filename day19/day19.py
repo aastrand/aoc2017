@@ -59,7 +59,7 @@ def main():
     assert test[0] == "ABCDEF"
     assert test[1] == 38
 
-    r = solve("input.txt")
+    r = solve("../input/2017/day19.txt")
     print(r[0])
     print(r[1])
 

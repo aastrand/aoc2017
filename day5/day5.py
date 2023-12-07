@@ -30,10 +30,10 @@ def solve(filename, part2=False):
 
 def main():
     assert solve("example.txt") == 5
-    print(solve("input.txt"))
+    print(solve("../input/2017/day5.txt"))
 
     assert solve("example.txt", True) == 10
-    print(solve("input.txt", True))
+    print(solve("../input/2017/day5.txt", True))
 
 
 if __name__ == "__main__":

@@ -58,7 +58,7 @@ def main():
     assert solve("<!!!>")[1] == 0
     assert solve('<{o"i!a,<{i<a>')[1] == 10
 
-    r = solve(io.get_input("input.txt"))
+    r = solve(io.get_input("../input/2017/day9.txt"))
     print(r[0])
     print(r[1])
 

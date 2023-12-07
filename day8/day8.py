@@ -50,7 +50,7 @@ def main():
     assert r[0] == 1
     assert r[1] == 10
 
-    r = solve("input.txt")
+    r = solve("../input/2017/day8.txt")
     print(r[0])
     print(r[1])
 

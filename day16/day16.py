@@ -66,10 +66,10 @@ def part2(input, max=16):
 def main():
 
     assert part1("s1,x3/4,pe/b", 5) == "baedc"
-    print(part1(io.get_input("input.txt")))
+    print(part1(io.get_input("../input/2017/day16.txt")))
 
     assert part2("s1,x3/4,pe/b", 5) == "abcde"
-    print(part2(io.get_input("input.txt")))
+    print(part2(io.get_input("../input/2017/day16.txt")))
 
 
 if __name__ == "__main__":

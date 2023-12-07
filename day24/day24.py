@@ -41,7 +41,7 @@ def main():
     assert example[0] == 31
     assert example[1] == 19
 
-    r = solve("input.txt")
+    r = solve("../input/2017/day24.txt")
     print(r[0])
     print(r[1])
 

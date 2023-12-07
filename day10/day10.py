@@ -75,14 +75,14 @@ def part2(max, lengths):
 def main():
     assert part1(4, "3,4,1,5") == 12
 
-    print(part1(255, io.get_input("input.txt")))
+    print(part1(255, io.get_input("../input/2017/day10.txt")))
 
     assert part2(255, "") == "a2582a3a0e66e6e86e3812dcb672a272"
     assert part2(255, "AoC 2017") == "33efeb34ea91902bb2f59c9920caa6cd"
     assert part2(255, "1,2,3") == "3efbe78a8d82f29979031a4aa0b16a9d"
     assert part2(255, "1,2,4") == "63960835bcdc130f0b66d7ff4f6a5a8e"
 
-    print(part2(255, io.get_input("input.txt")))
+    print(part2(255, io.get_input("../input/2017/day10.txt")))
 
 
 if __name__ == "__main__":

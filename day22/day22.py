@@ -78,11 +78,11 @@ def part2(filename, bursts):
 
 def main():
     assert part1("example.txt", 10000) == 5587
-    print(part1("input.txt", 10000))
+    print(part1("../input/2017/day22.txt", 10000))
 
     assert part2("example.txt", 100) == 26
     assert part2("example.txt", 10000000) == 2511944
-    print(part2("input.txt", 10000000))
+    print(part2("../input/2017/day22.txt", 10000000))
 
 
 if __name__ == "__main__":

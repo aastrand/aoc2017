@@ -100,7 +100,7 @@ def main():
     assert solve("example.txt")[0] == "tknk"
     assert solve("example.txt")[1] == 60
 
-    r = solve("input.txt")
+    r = solve("../input/2017/day7.txt")
     print(r[0])
     print(r[1])
 

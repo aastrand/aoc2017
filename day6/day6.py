@@ -54,10 +54,10 @@ def solve(filename, part2=False):
 
 def main():
     assert solve("example.txt")[0] == 5
-    print(solve("input.txt")[0])
+    print(solve("../input/2017/day6.txt")[0])
 
     assert solve("example.txt", True)[1] == 4
-    print(solve("input.txt", True)[1])
+    print(solve("../input/2017/day6.txt", True)[1])
 
 
 if __name__ == "__main__":

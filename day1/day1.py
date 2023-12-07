@@ -37,7 +37,7 @@ def main():
     assert part1("1234") == 0
     assert part1("91212129") == 9
 
-    print(part1(io.get_lines("input.txt")[0]))
+    print(part1(io.get_lines("../input/2017/day1.txt")[0]))
 
     assert part2("1212") == 6
     assert part2("1221") == 0
@@ -45,7 +45,7 @@ def main():
     assert part2("123123") == 12
     assert part2("12131415") == 4
 
-    print(part2(io.get_lines("input.txt")[0]))
+    print(part2(io.get_lines("../input/2017/day1.txt")[0]))
 
 
 if __name__ == "__main__":

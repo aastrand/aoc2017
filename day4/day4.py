@@ -42,7 +42,7 @@ def solve(filename):
 def main():
     assert solve("example.txt")[0] == 2
 
-    res = solve("input.txt")
+    res = solve("../input/2017/day4.txt")
     print(res[0])
     print(res[1])
 
